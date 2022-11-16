@@ -7,7 +7,6 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
 import Fixture from "./Components/Fixture/Fixture";
-import Noticias from "./Components/Noticias/Noticias";
 
 function App() {
   const dispatch = useDispatch();
