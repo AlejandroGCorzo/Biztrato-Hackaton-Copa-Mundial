@@ -6,7 +6,11 @@ import {
   RiWirelessChargingFill,
   RiUserStarFill,
 } from "react-icons/ri";
+<<<<<<< HEAD
 import { Link } from 'react-router-dom'
+=======
+import { Link } from "react-router-dom";
+>>>>>>> development
 
 export default function Sidebar() {
   return (
@@ -19,15 +23,15 @@ export default function Sidebar() {
         </div>
         <ul>
           <li>
-            <a
-              href="#"
+            <Link
+              to="/"
               className="text-gray-300 flex items-center gap-4 hover:bg-[#232323] py-2 px-4 rounded-xl transition-colors"
             >
               <RiHome4Line />
               Home
-            </a>
+            </Link>
           </li>
-          <li>
+          {/* <li>
             <a
               href="#"
               className="text-gray-300 flex items-center gap-4 hover:bg-[#232323] py-2 px-4 rounded-xl transition-colors"
@@ -35,11 +39,15 @@ export default function Sidebar() {
               <RiStore2Fill />
               Fechas
             </a>
-          </li>
+          </li> */}
           <li>
             <Link
+<<<<<<< HEAD
               to={"/fixture"}
               href="#"
+=======
+              to="/fixture"
+>>>>>>> development
               className="text-gray-300 flex items-center gap-4 hover:bg-[#232323] py-2 px-4 rounded-xl transition-colors"
             >
               <RiGridFill />
@@ -47,15 +55,15 @@ export default function Sidebar() {
             </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              to="/equipos"
               className="text-gray-300 flex items-center gap-4 hover:bg-[#232323] py-2 px-4 rounded-xl transition-colors"
             >
               <RiUserStarFill />
               Equipos
-            </a>
+            </Link>
           </li>
-          <li>
+          {/* <li>
             <a
               href="#"
               className="text-gray-300 flex items-center gap-4 hover:bg-[#232323] py-2 px-4 rounded-xl transition-colors"
@@ -63,7 +71,7 @@ export default function Sidebar() {
               <RiWirelessChargingFill />
               Ver en vivo
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

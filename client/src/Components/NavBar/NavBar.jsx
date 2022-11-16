@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <nav className="fixed lg:pl-80 w-full flex flex-col md:flex-row items-center gap-4 justify-between gap-4 p-8 bg-[#141414] z-40 ">
       <nav className="flex items-center gap-4 xs:order-1 lg-order-none">
-        <a href="#" className="bg-blue-600 text-white py-2 px-4 rounded-full ">
+        {/* <a href="#" className="bg-blue-600 text-white py-2 px-4 rounded-full ">
           EN VIVO
         </a>
         <a href="#" className="text-gray-500 py-2 px-4 rounded-full ">
@@ -13,13 +13,13 @@ export default function NavBar() {
         </a>
         <a href="#" className="text-gray-500 py-2 px-4 rounded-full ">
           Copa Femenina 2022
-        </a>
+        </a> */}
       </nav>
       <div>
         <ul className="flex items-center gap-4">
           <li>
             <a href="" className="text-gray-500 text-lg">
-              <RiNotification3Line />{" "}
+              <RiNotification3Line />
             </a>
           </li>
           <li>
@@ -32,7 +32,7 @@ export default function NavBar() {
               />
             </form>
           </li>
-        </ul>{" "}
+        </ul>
       </div>
     </nav>
   );

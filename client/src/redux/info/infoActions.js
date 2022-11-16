@@ -1,21 +1,27 @@
 import axios from "axios";
-import { allTeams, allMatchs } from "./infoSlice";
+import { allInfo } from "./infoSlice";
 
-export const getAllTeams = () => (dispatch) => {
+export const getAllInfo = () => (dispatch) => {
   axios
-    .get("/api/standings", {
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization":
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzc0MWQyMmZkOWFhYzIyNjcxNzdhZjciLCJpYXQiOjE2Njg1NTk3MDgsImV4cCI6MTY2ODY0NjEwOH0.GdyuRkNbXfFmM-LmHOz3w2KppWDWK5tS_I8THfzGk14"
-      }
-    })
-    .then((resolve) => {
-      const teams = resolve.data.data.map((el) => {
-        delete el._id;
-        return el;
+    .get("/api/standings")
+    .then((res) => {
+      axios.get("/api/match").then((resolve) => {
+        const matches = resolve.data.data;
+        const teams = res.data.data.map((group) => {
+          delete group._id;
+          return {
+            ...group,
+            matches: matches
+              .filter((match) => match.group === group.group)
+              .map((el) => {
+                delete el._id;
+                return el;
+              })
+              .sort((a, b) => (a.local_date > b.local_date ? 1 : -1)),
+          };
+        });
+        dispatch(allInfo(teams));
       });
-      dispatch(allTeams(teams));
     })
     .catch((e) => console.log(e));
 };
