@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getAllTeams } from "./redux/info/infoActions";
+import { getAllTeams, getAllMatchs } from "./redux/info/infoActions";
 import "./App.css";
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getAllTeams());
+    dispatch(getAllMatchs());
   }, []);
 
   return (

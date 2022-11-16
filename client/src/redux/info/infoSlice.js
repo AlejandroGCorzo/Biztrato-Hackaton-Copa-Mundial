@@ -4,11 +4,12 @@ export const info = createSlice({
   name: "info",
   initialState: {
     teams: [],
+    matchs: []
   },
   reducers: {
     allTeams: (state, action) => {
       state.teams = [...action.payload];
-    },
+    }
   },
 });
 
