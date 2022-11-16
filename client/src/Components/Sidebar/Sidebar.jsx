@@ -10,11 +10,11 @@ import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   return (
-    <div className="z-50 fixed top-0 w-60 h-full overflow-y border-r border-gray-800 p-8 flex flex-col justify-between bg-[#141414]">
+    <div className="z-50 fixed top-0 w-60 h-full overflow-y border-r border-gray-800 p-8 flex flex-col justify-between bg-[#440823]">
       <div>
         <div className="rounded-full">
           <h1 className="text-gray-300 uppercase font-bold text-2xl tracking-[5px] mb-10 ml-5">
-            QATAR WORDCUP 2022
+            WORDCUP QATAR 2022
           </h1>{" "}
         </div>
         <ul>

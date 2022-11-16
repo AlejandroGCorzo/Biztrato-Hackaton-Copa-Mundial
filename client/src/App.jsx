@@ -7,6 +7,7 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
 import Fixture from "./Components/Fixture/Fixture";
+import Noticias from "./Components/Noticias/Noticias";
 
 function App() {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-[#141414] min-h-screen">
+    <div className="bg-[#440823] min-h-screen">
       <BrowserRouter>
         <Sidebar />
         <NavBar />
