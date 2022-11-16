@@ -1,13 +1,17 @@
-import { useState } from "react";
-// import reactLogo from "./assets/react.svg";
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { getAllTeams } from "./redux/info/infoActions";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllTeams());
+  }, []);
 
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <h1 className="text-3xl bg-red-500 font-bold underline">Hello world!</h1>
     </div>
   );
 }
