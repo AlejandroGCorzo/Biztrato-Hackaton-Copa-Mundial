@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { getAllTeams } from "./redux/info/infoActions";
-import "./App.css";
+import { getAllInfo } from "./redux/info/infoActions";
+import "./Index.css";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
+import Fixture from "./Components/Fixture/Fixture";
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getAllTeams());
+    dispatch(getAllInfo());
   }, []);
 
   return (
@@ -20,6 +21,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route path="/fixture" element={<Fixture />} />
         </Routes>
       </BrowserRouter>
     </div>
