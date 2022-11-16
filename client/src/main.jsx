@@ -3,6 +3,11 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { Provider } from "react-redux";
 import store from "./redux/store.js";
+import axios from "axios";
+
+axios.defaults.headers["Authorization"] = `Bearer ${
+  import.meta.env.VITE_API_TOKEN
+}`;
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
