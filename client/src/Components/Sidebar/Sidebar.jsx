@@ -37,7 +37,7 @@ export default function Sidebar() {
           </li>
           <li>
             <a
-              href="#"
+              href="/fixture"
               className="text-gray-300 flex items-center gap-4 hover:bg-[#232323] py-2 px-4 rounded-xl transition-colors"
             >
               <RiGridFill />

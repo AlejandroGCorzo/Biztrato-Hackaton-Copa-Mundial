@@ -3,15 +3,15 @@ import { createSlice } from "@reduxjs/toolkit";
 export const info = createSlice({
   name: "info",
   initialState: {
-    teams: [],
+    groups: [],
   },
   reducers: {
-    allTeams: (state, action) => {
-      state.teams = [...action.payload];
+    allInfo: (state, action) => {
+      state.groups = [...action.payload];
     },
   },
 });
 
-export const { allTeams } = info.actions;
+export const { allInfo } = info.actions;
 
 export default info.reducer;
