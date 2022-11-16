@@ -3,7 +3,7 @@ import { RiArrowRightCircleLine } from "react-icons/ri";
 
 export default function Home() {
   return (
-    <main className="lg:pl-[340px] p-8 pt-36 ">
+    <main className="lg:pl-[340px] p-8 pt-36">
       <div className="grid grid-cols-1 md:grid-cols-6 gap-2">
         <div className="md:col-span-5 relative ">
           <img

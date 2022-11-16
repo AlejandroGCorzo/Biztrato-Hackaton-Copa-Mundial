@@ -9,10 +9,13 @@ export const info = createSlice({
   reducers: {
     allTeams: (state, action) => {
       state.teams = [...action.payload];
+    },
+    allMatchs: (state, action) => {
+      state.matchs = [...action.payload]
     }
   },
 });
 
-export const { allTeams } = info.actions;
+export const { allTeams, allMatchs } = info.actions;
 
 export default info.reducer;
