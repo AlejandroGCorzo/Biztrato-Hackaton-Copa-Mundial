@@ -1,19 +1,19 @@
 import { useState } from "react";
 import { setVote } from "../../Services/Services";
+import { teams } from "../../json/teams.json";
 
 export const VoteInput = () => {
 
-  const [voto, setVoto] = useState({
-    vote: ""
-  });
+  const [voto, setVoto] = useState("");
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setVote(voto);
+    setVote(voto)
   }
 
   const handleChange = (e) => {
-    setVoto({ vote: e.target.value });
+    setVoto(e.target.value);
   }
 
   return (
@@ -22,13 +22,14 @@ export const VoteInput = () => {
         name="seleccionVotada"
         id="seleccionVotada"
         onChange={handleChange}
-        value={voto.vote}
+        value={voto}
       >
         <option disabled value="">Votá tu selección favorita</option>
-        <option value="argentina">Argentina</option>
-        <option value="brasil">Brasil</option>
-        <option value="colombia">Colombia</option>
-        <option value="qatar">Qatar</option>
+        {
+          teams.map(team => (
+            <option key={team} value={team}>{team}</option>
+          ))
+        }
       </select>
       <button type="submit" value="Votar">Votar</button>
     </form>

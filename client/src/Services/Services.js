@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs, getFirestore, updateDoc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBsALI3iBxUgETpqw9uIHmwvtpKqwicCPo",
@@ -12,13 +12,21 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const col = collection(db, "votos");
 
 export const getTotalVotes = async () => {
-
+  const snapshot = await getDocs(col);
+  const data = snapshot.docs.map(doc => ({ ...doc.data() }));
+  return data;
 }
 
 export const setVote = async (vote) => {
-  const col = collection(db, "votos");
-  const res = await addDoc(col, vote);
-  return res;
+  try {
+    const docRef = doc(db, "votos", vote);
+    const snapDoc = await getDoc(docRef);
+    const { votos } = snapDoc.data();
+    await updateDoc(docRef, { votos: votos + 1 });
+  } catch (error) {
+    console.error("Hubo un problema en la conexión con Firebase: ", error)
+  }
 }
