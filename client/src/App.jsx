@@ -7,6 +7,7 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
 import Fixture from "./Components/Fixture/Fixture";
+import Timestamp from "./Components/Timestamp/Timestamp";
 
 function App() {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/fixture/:group" element={<Fixture />} />
+          <Route path="/timestamp" element={<Timestamp />} />
         </Routes>
       </BrowserRouter>
     </div>
