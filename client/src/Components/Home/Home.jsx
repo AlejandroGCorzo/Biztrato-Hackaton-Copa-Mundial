@@ -1,5 +1,6 @@
 import React from "react";
 import { RiArrowRightCircleLine } from "react-icons/ri";
+import { VoteInput } from "../Vote/VoteInput";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <VoteInput />
     </main>
   );
 }
