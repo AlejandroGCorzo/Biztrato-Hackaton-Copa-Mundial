@@ -3,7 +3,7 @@ import { RiSearch2Fill, RiNotification3Line } from "react-icons/ri";
 
 export default function NavBar() {
   return (
-    <header className="fixed lg:pl-80 w-full flex flex-col md:flex-row items-center gap-4 justify-between gap-4 p-8 bg-[#141414] z-40 ">
+    <nav className="fixed lg:pl-80 w-full flex flex-col md:flex-row items-center gap-4 justify-between gap-4 p-8 bg-[#141414] z-40 ">
       <nav className="flex items-center gap-4 xs:order-1 lg-order-none">
         {/* <a href="#" className="bg-blue-600 text-white py-2 px-4 rounded-full ">
           EN VIVO
@@ -34,6 +34,6 @@ export default function NavBar() {
           </li>
         </ul>
       </div>
-    </header>
+    </nav>
   );
 }

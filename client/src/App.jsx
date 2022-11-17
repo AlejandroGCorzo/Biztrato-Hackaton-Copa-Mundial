@@ -21,7 +21,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/fixture" element={<Fixture />} />
+          <Route path="/fixture/:group" element={<Fixture />} />
         </Routes>
       </BrowserRouter>
     </div>
