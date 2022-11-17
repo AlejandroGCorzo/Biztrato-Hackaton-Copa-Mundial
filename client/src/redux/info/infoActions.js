@@ -3,9 +3,21 @@ import { allInfo } from "./infoSlice";
 
 export const getAllInfo = () => (dispatch) => {
   axios
-    .get("/api/standings")
+    .get("/api/standings", {
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization":
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzc0MWQyMmZkOWFhYzIyNjcxNzdhZjciLCJpYXQiOjE2Njg2NTA5OTQsImV4cCI6MTY2ODczNzM5NH0.YB79nYDmzHM44tHB3bISMjs31q2bhqtxfbcs6uLdvgI"
+      }
+    })
     .then((res) => {
-      axios.get("/api/match").then((resolve) => {
+      axios.get("/api/match", {
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization":
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzc0MWQyMmZkOWFhYzIyNjcxNzdhZjciLCJpYXQiOjE2Njg2NTA5OTQsImV4cCI6MTY2ODczNzM5NH0.YB79nYDmzHM44tHB3bISMjs31q2bhqtxfbcs6uLdvgI"
+        }
+      }).then((resolve) => {
         const matches = resolve.data.data;
         const teams = res.data.data.map((group) => {
           delete group._id;
@@ -25,31 +37,3 @@ export const getAllInfo = () => (dispatch) => {
     })
     .catch((e) => console.log(e));
 };
-
-export const getAllMatchs = () => (dispatch) => {
-  axios.get("/api/match", {
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization":
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzc0MWQyMmZkOWFhYzIyNjcxNzdhZjciLCJpYXQiOjE2Njg1NTk3MDgsImV4cCI6MTY2ODY0NjEwOH0.GdyuRkNbXfFmM-LmHOz3w2KppWDWK5tS_I8THfzGk14"
-    }
-  })
-    .then(response => {
-      const newMatchs = response.data.data.map((el) => {
-        return {
-          group: el.group,
-          home_team: el.home_team_en,
-          home_flag: el.home_flag,
-          away_team: el.away_team_en,
-          away_flag: el.away_flag,
-          date: el.local_date,
-          matchday: el.matchday,
-          home_score: el.home_score,
-          away_score: el.away_score
-        }
-      })
-
-      dispatch(allMatchs(newMatchs))
-    })
-    .catch(error => console.log(error))
-}

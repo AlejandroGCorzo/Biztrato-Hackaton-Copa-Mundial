@@ -1,16 +1,11 @@
 import React from "react";
 import {
   RiHome4Line,
-  RiStore2Fill,
   RiGridFill,
-  RiWirelessChargingFill,
   RiUserStarFill,
 } from "react-icons/ri";
-<<<<<<< HEAD
-import { Link } from 'react-router-dom'
-=======
 import { Link } from "react-router-dom";
->>>>>>> development
+import './Sidebar.styles.css'
 
 export default function Sidebar() {
   return (
@@ -42,16 +37,22 @@ export default function Sidebar() {
           </li> */}
           <li>
             <Link
-<<<<<<< HEAD
-              to={"/fixture"}
-              href="#"
-=======
               to="/fixture"
->>>>>>> development
-              className="text-gray-300 flex items-center gap-4 hover:bg-[#232323] py-2 px-4 rounded-xl transition-colors"
+              className="text-gray-300 flex items-center gap-4 hover:bg-[#232323] py-2 px-4 rounded-xl transition-colors menu-horizontal"
             >
               <RiGridFill />
               Fixture
+              {/* <ul className="menu-horizontal"> */}
+              <ul className="menu-vertical">
+                <li><Link to="/fixture/A">Grupo A</Link></li>
+                <li><Link to="/fixture/B">Grupo B</Link></li>
+                <li><Link to="/fixture/C">Grupo C</Link></li>
+                <li><Link to="/fixture/D">Grupo D</Link></li>
+                <li><Link to="/fixture/E">Grupo E</Link></li>
+                <li><Link to="/fixture/F">Grupo F</Link></li>
+                <li><Link to="/fixture/G">Grupo G</Link></li>
+                <li><Link to="/fixture/H">Grupo H</Link></li>
+              </ul>
             </Link>
           </li>
           <li>
