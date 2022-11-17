@@ -1,6 +1,5 @@
 import React from "react";
 import { RiArrowRightCircleLine } from "react-icons/ri";
-import { ResultadosVotos } from "../Vote/ResultadosVotos";
 import { VoteInput } from "../Vote/VoteInput";
 
 export default function Home() {
