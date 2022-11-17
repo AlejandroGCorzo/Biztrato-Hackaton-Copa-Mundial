@@ -25,7 +25,6 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/fixture" element={<Fixture />} />
           <Route path="/partidos" element={<PartidosList />} />
-          <Route path="/tilt" element={<TiltCard />} />
         </Routes>
       </BrowserRouter>
     </div>
