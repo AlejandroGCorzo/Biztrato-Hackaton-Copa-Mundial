@@ -7,6 +7,9 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
 import Fixture from "./Components/Fixture/Fixture";
+import { PartidosList } from "./Components/Partidos/PartidosList";
+import { TiltCard } from "./Components/TiltCard/TiltCard";
+import Timestamp from "./Components/Timestamp/Timestamp";
 
 function App() {
   const dispatch = useDispatch();
@@ -21,10 +24,12 @@ function App() {
         <NavBar />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/fixture" element={<Fixture />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+          <Route path="/partidos" element={<PartidosList />} />
+          <Route path="/fixture/:group" element={<Fixture />} />
+          <Route path="/timestamp" element={<Timestamp />} />
+        </Routes >
+      </BrowserRouter >
+    </div >
   );
 }
 

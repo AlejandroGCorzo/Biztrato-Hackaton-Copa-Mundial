@@ -1,0 +1,17 @@
+.tiltContainer {
+  display: grid;
+  place-items: center;
+}
+
+.tilt {
+  transition: all 0.1 ease;
+  /* cursor: pointer */
+}
+
+.tiltContent {
+  width: 300px;
+}
+
+img {
+  width: 100%;
+}

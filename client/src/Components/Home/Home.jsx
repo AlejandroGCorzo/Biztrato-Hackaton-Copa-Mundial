@@ -1,5 +1,6 @@
 import React from "react";
 import { RiArrowRightCircleLine } from "react-icons/ri";
+import { VoteInput } from "../Vote/VoteInput";
 
 export default function Home() {
   return (
@@ -9,9 +10,7 @@ export default function Home() {
         <div className="md:col-span-5 relative ">
           <img
             className="w-screen h-[500px] object-cover lg:rounded-tl-xl lg:rounded-bl-xl "
-            src="https://elperiodicodeportivo.com.co/wp-content/uploads/2022/11/Qatar-1.jpg"
-            alt=""
-          />
+            src="https://elperiodicodeportivo.com.co/wp-content/uploads/2022/11/Qatar-1.jpg"></img>
           <h1 className="absolute top-4 left-4 text-3xl text-white font-bold">
             Copa Mundial 2022
           </h1>
