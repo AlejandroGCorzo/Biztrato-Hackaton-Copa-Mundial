@@ -1,6 +1,15 @@
 import axios from "axios";
-import { allInfo, timestamp } from "./infoSlice";
+import { allInfo, timestamp, allTeams } from "./infoSlice";
 
+export const getAllTeams = () => async (dispatch) => {
+  try {
+    let response = await axios.get("/api/team");
+    let teams = response.data.data;
+    dispatch(allTeams(teams));
+  } catch (error) {
+    console.log(error.response);
+  }
+};
 export const getAllInfo = () => (dispatch) => {
   axios
     .get("/api/standings")
@@ -48,3 +57,17 @@ export const setTimestamp = (value) => (dispatch) => {
     })
   );
 };
+
+export async function TEAMSS() {
+  let teams;
+  await axios.get("/api/team").then((resolve) => {
+    teams = resolve.data.data.map((team) => {
+      return {
+        id: team.id,
+        name: team.name_en,
+        // _id: team._id
+      }
+    });
+  });
+  return teams;
+}

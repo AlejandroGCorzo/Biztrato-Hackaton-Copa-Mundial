@@ -13,7 +13,7 @@ import {
   RiFootballFill
 } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import './Sidebar.styles.css'
+import "./Sidebar.styles.css";
 
 export default function Sidebar() {
   const [showMenu, setShowMenu] = useState(false);

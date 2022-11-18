@@ -54,6 +54,7 @@ export default function Home() {
           </ul>
         </div>
       </div>
+      <VoteInput />
     </main>
   );
 }

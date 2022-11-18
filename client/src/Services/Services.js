@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { collection, doc, getDoc, getDocs, getFirestore, updateDoc } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs, getFirestore, setDoc, updateDoc } from "firebase/firestore";
+import { TEAMSS } from "../redux/info/infoActions";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBsALI3iBxUgETpqw9uIHmwvtpKqwicCPo",
@@ -12,7 +13,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-const col = collection(db, "votos");
+const col = collection(db, "campeon");
 
 export const getTotalVotes = async () => {
   const snapshot = await getDocs(col);
@@ -22,11 +23,20 @@ export const getTotalVotes = async () => {
 
 export const setVote = async (vote) => {
   try {
-    const docRef = doc(db, "votos", vote);
+    const docRef = doc(db, "campeon", vote);
     const snapDoc = await getDoc(docRef);
     const { votos } = snapDoc.data();
     await updateDoc(docRef, { votos: votos + 1 });
   } catch (error) {
     console.error("Hubo un problema en la conexión con Firebase: ", error)
   }
+}
+
+export const setData = async () => {
+  const teams = await TEAMSS()
+  console.log(teams)
+  const set = async (team) => {
+    await setDoc(doc(db, "campeon", team), { pais: team, votos: 0 })
+  }
+  teams.forEach(team => set(team.name))
 }
