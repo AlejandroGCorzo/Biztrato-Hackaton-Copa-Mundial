@@ -3,6 +3,7 @@ import {
   RiHome4Line,
   RiGridFill,
   RiUserStarFill,
+  RiFootballFill
 } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import './Sidebar.styles.css'
@@ -13,7 +14,7 @@ export default function Sidebar() {
       <div>
         <div className="rounded-full">
           <h1 className="text-gray-300 uppercase font-bold text-2xl tracking-[5px] mb-10 ml-5">
-            QATAR WORDCUP 2022
+            QATAR WORLDCUP 2022
           </h1>{" "}
         </div>
         <ul>
@@ -62,6 +63,15 @@ export default function Sidebar() {
             >
               <RiUserStarFill />
               Equipos
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/partidos"
+              className="text-gray-300 flex items-center gap-4 hover:bg-[#232323] py-2 px-4 rounded-xl transition-colors"
+            >
+              <RiFootballFill />
+              Partidos
             </Link>
           </li>
           {/* <li>

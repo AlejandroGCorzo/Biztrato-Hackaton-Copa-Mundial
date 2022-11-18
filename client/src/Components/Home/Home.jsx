@@ -1,5 +1,6 @@
 import React from "react";
 import { RiArrowRightCircleLine } from "react-icons/ri";
+import { VoteInput } from "../Vote/VoteInput";
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
       <div className="grid grid-cols-1 md:grid-cols-6 gap-2">
         <div className="md:col-span-5 relative ">
           <img
-            className="w-full h-[500px] object-cover lg:rounded-tl-xl lg:rounded-bl-xl "
+            className="w-full h-[500px] object-cover lg:rounded-xl "
             src="https://digitalhub.fifa.com/transform/8ee6c039-d966-4fb8-b5aa-6a64edfef317/FIFAPLS_SE_WhoToWatchEight_Main_Hero_01_V1?io=transform:fill,height:434,width:959&quality=75 "
             alt=""
           />
