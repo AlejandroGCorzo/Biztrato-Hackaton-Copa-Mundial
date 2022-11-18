@@ -10,6 +10,16 @@ export const getAllTeams = () => async (dispatch) => {
     console.log(error.response);
   }
 };
+
+export const logIn = () => {
+  axios
+    .post("/api/user", {
+      email: import.meta.env.VITE_API_MAIL,
+      password: import.meta.env.VITE_API_PASS,
+    })
+    .then((res) => console.log(res.data.data));
+};
+
 export const getAllInfo = () => (dispatch) => {
   axios
     .get("/api/standings")
@@ -66,13 +76,12 @@ export async function TEAMSS() {
         id: team.id,
         name: team.name_en,
         // _id: team._id
-      }
+      };
     });
   });
   return teams;
 }
 
 export const getMatchsDay = (day) => {
-  axios.get("/api/bymatch/" + day)
-}
-
+  axios.get("/api/bymatch/" + day);
+};
