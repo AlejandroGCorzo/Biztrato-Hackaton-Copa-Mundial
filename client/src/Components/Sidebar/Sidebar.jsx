@@ -36,25 +36,21 @@ export default function Sidebar() {
               Fechas
             </a>
           </li> */}
-          <li>
-            <Link
-              to="/fixture"
-              className="text-gray-300 flex items-center gap-4 hover:bg-[#232323] py-2 px-4 rounded-xl transition-colors menu-horizontal"
-            >
+          <li className="cursor-pointer text-gray-300 flex flex-row hover:bg-[#232323] py-2 px-4 rounded-xl transition-colors menu-horizontal">
+            <div className="flex gap-4 items-center">
               <RiGridFill />
               Fixture
-              {/* <ul className="menu-horizontal"> */}
-              <ul className="menu-vertical">
-                <li><Link to="/fixture/A">Grupo A</Link></li>
-                <li><Link to="/fixture/B">Grupo B</Link></li>
-                <li><Link to="/fixture/C">Grupo C</Link></li>
-                <li><Link to="/fixture/D">Grupo D</Link></li>
-                <li><Link to="/fixture/E">Grupo E</Link></li>
-                <li><Link to="/fixture/F">Grupo F</Link></li>
-                <li><Link to="/fixture/G">Grupo G</Link></li>
-                <li><Link to="/fixture/H">Grupo H</Link></li>
-              </ul>
-            </Link>
+            </div>
+            <ul className="menu-vertical">
+              <li><Link to="/fixture/A">Grupo A</Link></li>
+              <li><Link to="/fixture/B">Grupo B</Link></li>
+              <li><Link to="/fixture/C">Grupo C</Link></li>
+              <li><Link to="/fixture/D">Grupo D</Link></li>
+              <li><Link to="/fixture/E">Grupo E</Link></li>
+              <li><Link to="/fixture/F">Grupo F</Link></li>
+              <li><Link to="/fixture/G">Grupo G</Link></li>
+              <li><Link to="/fixture/H">Grupo H</Link></li>
+            </ul>
           </li>
           <li>
             <Link
