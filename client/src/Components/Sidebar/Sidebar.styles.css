@@ -16,7 +16,8 @@
     list-style: none;
     width: 140px;
     background-color: rgba(0, 0, 0, .5);
-    margin-top: 10px;
+    margin: 0.5rem 0rem 0rem 9.8rem;
+    top: 12.5rem;
 }
 
 .menu-horizontal:hover .menu-vertical {
