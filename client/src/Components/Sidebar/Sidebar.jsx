@@ -3,10 +3,10 @@ import {
   RiHome4Line,
   RiGridFill,
   RiUserStarFill,
-  RiFootballFill
+  RiFootballFill,
 } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import './Sidebar.styles.css'
+import "./Sidebar.styles.css";
 
 export default function Sidebar() {
   return (
@@ -42,14 +42,30 @@ export default function Sidebar() {
               Fixture
             </div>
             <ul className="menu-vertical">
-              <li><Link to="/fixture/A">Grupo A</Link></li>
-              <li><Link to="/fixture/B">Grupo B</Link></li>
-              <li><Link to="/fixture/C">Grupo C</Link></li>
-              <li><Link to="/fixture/D">Grupo D</Link></li>
-              <li><Link to="/fixture/E">Grupo E</Link></li>
-              <li><Link to="/fixture/F">Grupo F</Link></li>
-              <li><Link to="/fixture/G">Grupo G</Link></li>
-              <li><Link to="/fixture/H">Grupo H</Link></li>
+              <li>
+                <Link to="/fixture/A">Grupo A</Link>
+              </li>
+              <li>
+                <Link to="/fixture/B">Grupo B</Link>
+              </li>
+              <li>
+                <Link to="/fixture/C">Grupo C</Link>
+              </li>
+              <li>
+                <Link to="/fixture/D">Grupo D</Link>
+              </li>
+              <li>
+                <Link to="/fixture/E">Grupo E</Link>
+              </li>
+              <li>
+                <Link to="/fixture/F">Grupo F</Link>
+              </li>
+              <li>
+                <Link to="/fixture/G">Grupo G</Link>
+              </li>
+              <li>
+                <Link to="/fixture/H">Grupo H</Link>
+              </li>
             </ul>
           </li>
           <li>
