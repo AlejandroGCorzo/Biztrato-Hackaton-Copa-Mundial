@@ -3,12 +3,12 @@ import { collection, doc, getDoc, getDocs, getFirestore, setDoc, updateDoc } fro
 import { TEAMSS } from "../redux/info/infoActions";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBsALI3iBxUgETpqw9uIHmwvtpKqwicCPo",
-  authDomain: "hackaton-ad555.firebaseapp.com",
-  projectId: "hackaton-ad555",
-  storageBucket: "hackaton-ad555.appspot.com",
-  messagingSenderId: "274343359124",
-  appId: "1:274343359124:web:d27e5c406d4ee3244efa81"
+  apiKey: "AIzaSyBSIyum6sCCvhLxoBs7M5SvrP_OQIYFL0c",
+  authDomain: "bizt-82802.firebaseapp.com",
+  projectId: "bizt-82802",
+  storageBucket: "bizt-82802.appspot.com",
+  messagingSenderId: "924904765594",
+  appId: "1:924904765594:web:55ea3edaf6077c5ea54723"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -40,3 +40,4 @@ export const setData = async () => {
   }
   teams.forEach(team => set(team.name))
 }
+

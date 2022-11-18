@@ -11,12 +11,14 @@ import { PartidosList } from "./Components/Partidos/PartidosList";
 import { TiltCard } from "./Components/TiltCard/TiltCard";
 import Timestamp from "./Components/Timestamp/Timestamp";
 import Equipos from "./components/Equipos/Equipos";
+import { setData } from "./Services/Services";
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllInfo());
     dispatch(getAllTeams());
+    // setData()
   }, []);
 
   return (
