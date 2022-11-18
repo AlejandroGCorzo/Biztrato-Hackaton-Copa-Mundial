@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { RiArrowRightCircleLine } from "react-icons/ri";
+import { ResultadosVotos } from "../Vote/ResultadosVotos";
 import { VoteInput } from "../Vote/VoteInput";
 
 export default function Home() {
+  const [render, setRender] = useState(false)
+
   return (
     <main className="lg:pl-[340px] p-8 pt-36">
       <div className="grid grid-cols-1 md:grid-cols-6 gap-2">
@@ -27,7 +30,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="col-span-1 h-[500px] w-full bg-[#440823] lg:rounded-tr-xl lg:rounded-br-xl">
+        <div className="col-span-1 h-[500px] w-full bg-[#232323] lg:rounded-tr-xl lg:rounded-br-xl">
           <ul className="p-5 lg-p-2 w-50  flex flex-col gap-9 h-full overflow-y rounded-tr-xl rounded-br-xl">
             < li >
               <a href="" className="flex items-center gap-4 text-white text-lm">
@@ -54,7 +57,10 @@ export default function Home() {
           </ul>
         </div>
       </div>
-      <VoteInput />
+      <div className="flex justify-between">
+        <VoteInput render={render} setRender={setRender} />
+        <ResultadosVotos render={render} />
+      </div>
     </main>
   );
 }
