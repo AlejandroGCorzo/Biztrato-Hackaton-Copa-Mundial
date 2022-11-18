@@ -1,26 +1,22 @@
 .menu-horizontal {
     list-style: none;
-    display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 }
 
 .menu-horizontal {
     display: block;
-    padding: 15px 20px;
-    color: white;
+    /* padding: 15px 20px; */
+    /* color: white; */
     text-decoration: none;
-}
-
-.menu-horizontal:hover {
-    background-color: red;
 }
 
 .menu-vertical {
     position: absolute;
     display: none;
     list-style: none;
-    width: 200px;
+    width: 140px;
     background-color: rgba(0, 0, 0, .5);
+    margin-top: 10px;
 }
 
 .menu-horizontal:hover .menu-vertical {
@@ -35,13 +31,5 @@
     display: block;
     color: white;
     text-decoration: none;
-    padding: 15px 15px 15px 20px;
-}
-
-#html {
-    margin: auto;
-    padding: 20px;
-    max-width: 900px;
-    background: white;
-
+    padding: 10px 15px 15px 20px;
 }
