@@ -1,6 +1,15 @@
 import axios from "axios";
-import { allInfo, timestamp } from "./infoSlice";
+import { allInfo, timestamp, allTeams } from "./infoSlice";
 
+export const getAllTeams = () => async (dispatch) => {
+  try {
+    let response = await axios.get("/api/team");
+    let teams = response.data.data;
+    dispatch(allTeams(teams));
+  } catch (error) {
+    console.log(error.response);
+  }
+};
 export const getAllInfo = () => (dispatch) => {
   axios
     .get("/api/standings")

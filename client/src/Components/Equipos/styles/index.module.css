@@ -1,0 +1,20 @@
+.espacio{
+    height: 100px;
+}
+.container{
+    width:70%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 2rem;
+    gap:1rem;
+}
+.title{
+margin-left:40%;
+color: white;
+font-size: xx-large;
+font-weight: 700;
+}
