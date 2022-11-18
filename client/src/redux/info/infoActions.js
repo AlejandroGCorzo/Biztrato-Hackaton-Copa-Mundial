@@ -71,3 +71,8 @@ export async function TEAMSS() {
   });
   return teams;
 }
+
+export const getMatchsDay = (day) => {
+  axios.get("/api/bymatch/" + day)
+}
+
